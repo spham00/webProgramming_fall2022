@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons and Games</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <!-- markups are in JS file -->
+    <h2>Welcome to Button Games!</h2>
+    <p id="directions">
+        This website has different button games for you to try!
+        Just click a button and find out what changes.
+    </p>
+
+    <!-- compliment game -->
+    <h3>Get two compliments!</h3>
+    <p id="compliment">You look absolutely lovely today!</p>
+    <button id="compliment-button">Click here for one more compliment!</button>
+
+    <!-- changing font size for query selector all -->
+    <h3>Help change the font size of these headings! They're too big!</h3>
+    <h1>I'm a big heading! Mwahahhaa</h1>
+    <h1>I am H1, the biggest heading ever!!</h1>
+    <button id="font-size-change">Click here to make them smaller!</button>
+
+    <!-- counting how many elements are in the div -->
+    <h3>Count how many lines are in this box, then press the button to check!</h3>
+    <div id='tagDiv'>
+        <p>How many?</p>
+        <p>I don't know.</p>
+        <p>This is just random text.</p>
+        <p>We love fillers.</p>
+    </div>
+    <button id="count-div">Check your answer!</button>
+
+    <!-- using classes to style -->
+    <h3>Click the button to change the below paragraphs' color to green!</h3>
+    <p class="color-green">I'm supposed to be green.</p>
+    <p class="color-green">Please turn me green!</p>
+    <p class="color-green">Let me be green, now!</p>
+    <button id="green-button">Click here to grant the paragraphs' wish.</button>
+
+    <!-- hover -->
+    <h3>Pet this cute wild Eevee with your mouse!</h3>
+    <p id="eevee-comment">Isn't the Eevee cute?</p>
+    <img src="eevee.jpg" id="eevee-hover"
+        alt="A Pokemon creature called Eevee resembling a bunny and a fox."/>
+
+    <!-- list thing sto add, remove, toggle -->
+    <h3>Add foods to this list, then customize how the list looks (a little)!</h3>
+    <p>
+        Type something in the input textbox, then click the add button to dynamically add
+        that item to the list. There are buttons for view customization below too.
+    </p>
+    <ul id="food-list">
+        <li>Pho</li>
+        <li>Sushi</li>
+        <li>Ramen</li>
+        <li>Naengmyeon</li>
+        <li>Kalguksu</li>
+    </ul>
+    <input type="text" placeholder="Put a food here!" id="another-food"/>
+    <button id="add-button">Add the food item</button>
+    <br/>
+    <button id="purple-button">Change the color of the list items to purple</button>
+    <br/>
+    <button id="black-button">Change the color of the list items back to black</button>
+    <br/>
+    <button id="toggle-button">Toggle the background of the unordered list</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
