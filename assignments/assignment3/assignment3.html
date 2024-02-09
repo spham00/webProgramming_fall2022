@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Starry Nights</title>
+
+    <!-- external style sheet reference -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <header>
+        <!-- provided info for the SEO -->
+        <meta name="description" content="A short page of astronomy things."/>
+        <meta name="author" content="Sarah Pham"/>
+    </header>
+    <main>
+        <h2>Welcome to Starry Nights!</h2>
+
+        <p>
+            This is a simple page about all things astronomy related, like the
+            stars and planets, just anything space related. We may change this
+            more frequently in the future; the contents of this page will change
+            at any time.
+        </p>
+
+        <h3>Here are the main topics for the page today!</h3>
+
+        <!--
+            box model:
+                I tried to make this a nav and add anchor links but it would mess up the 
+                formatting of the boxes. I couldn't figure out why so I just let it be.
+        -->
+        <div class="main-container"> <!-- main wrapper div -->
+            <div class="row-one"> <!-- Row 1 -->
+                <div class="box"><p>Jupiter</p></div>
+                <div class="box"><p>Saturn</p></div>
+                <div class="box"><p>Neptune</p></div>
+            </div>
+        </div> 
+
+        <h3>Jupiter</h3>
+
+        <p>
+            Below are some fun facts I've gathered about Jupiter from other sites.
+            These sources include Universe Today and Nine Planets.
+        </p>
+
+        <!-- grid -->
+        <div class="grid-container">
+            <div class="grid-item">
+                Jupiter is the fastest spinning planet in the solar system, spinning
+                at 45,300km/h, or 28,148 mph.
+            </div>
+            <div class="grid-item">
+                Jupiter has 79 moons. Most of them are not very big (10km), but still,
+                there are a lot. The most prominent ones are known as the Galilean Moons.
+            </div>
+            <div class="grid-item">
+                Jupiter is the biggest planet in the solar system and is bigger than all
+                the other planets combined (almost by 2x).
+            </div>
+            <div class="grid-item">
+                Jupiter is like a magnet for comets and asteroids, attracting them with its
+                gravity, which in a way protects other planets in the solar system from being
+                hit by them.
+            </div>
+            <div class="grid-item">
+                Jupiter is a gas giant, being made up of hydrogen and helium for the most part.
+            </div>
+            <div class="grid-item">
+                One year on Jupiter is 11.8 Earth years because of how far away it is from the
+                Sun, and the days only last 10 hours.
+            </div>
+        </div>
+
+        <h3>Saturn</h3>
+
+        <p>Below is a picture of Saturn.</p>
+
+        <img src="saturn.jpg" alt="A yellow-brownish planet with rings."/>
+
+        <!-- id selector -->
+        <p id="yellow-para">
+            Because Saturn's color is a hazy yellow-brown, this text is light yellow.
+            As you can see, Saturn has many rings around it.
+            This picture was kindly provided by NASA from Unsplash.
+        </p>
+
+        <h3>Neptune</h3>
+
+        <!-- multiple class selector here -->
+        <p class="red-para" id="make-red-visible">
+            WARNING: Visiting this planet will take 12 years, and not to mention, it's really
+            cold there. It is STRONGLY advised for you not to go there.
+        </p>
+        <p>
+            A long time ago, according to NASA, Neptune took its shape at the same time as
+            the formation of the solar system. Gravity pulled swirling gas and dust together
+            to make it. It makes me wonder if other planets were created a similar way.
+        </p>
+
+        <!-- multiple class selector here too -->
+        <h6 class="red-para">
+            All facts are real on this site.
+        </h6>
+    </main>
+    <footer>
+        <!-- copyright information -->
+        <p>All rights reserved. September 2022.</p>
+    </footer>
+</body>
+</html>
