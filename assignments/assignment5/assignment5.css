@@ -1,0 +1,88 @@
+/* css flexbox, with justified content and item alignment */
+.container {
+    /* width: 600px; */
+    width: 90vw;
+    margin: 0 auto; /* centers */
+    border: 2px solid black;
+    background-color: blanchedalmond;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.grid-item {
+    width: 250px;
+    height: 300px;
+    /* because margin is responsive, unit space will scale
+        margin is scaling 3% as you downsize the width */
+    margin: 1%;
+    border: 2px solid black;
+
+    text-align: center;
+}
+
+/* differentiate for the user between the lyric and description boxes */
+.lyric {
+    background-color: beige;
+}
+
+.desc {
+    background-color: rgba(255, 251, 240, 0.814);
+}
+
+/* So that the text in the boxes aren't touching the box edges
+    Only applied to the text in the boxes rather than website desc */
+.container p {
+    padding: 10px 7px 7px 7px;
+    font-size: large;
+}
+
+/* Media queries, some with multiple selectors */
+
+/*
+    If screen width <= 600, apply styling
+    This is for mobile. Though width ranges are usually in the
+    300-400 range, I wanted to make sure for other sized windows
+    it would be appropriate. Would display things in columns
+    instead of 
+*/
+@media only screen and (max-width: 600px) {
+    .container {
+        /* parent already defines the display flex */
+        flex-direction: column;
+        /* aligns things in the center for mobile in the column view
+            notice how this one then becomes horizontal when out of mobile view */
+        align-items: center;
+    }
+
+    .grid-item {
+        width: 300px;
+        height: 250px;
+    }
+
+    /* accommodate for a box that needed extra space */
+    #bigger-box {
+        height: 300px;
+    }
+}
+
+/*
+    If screen width > 900, apply styling
+    This is for desktop or tablet landscape views (or a more comfortable
+    viewing experience so the text isn't squished vertically).
+    This is a media query with minimum width
+*/
+@media screen and (min-width: 900px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .grid-item {
+        width: 350px;
+        height: 250px;
+    }
+}
