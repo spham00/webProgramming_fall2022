@@ -1,0 +1,180 @@
+/* 
+    Gradient w/ class selector
+    Supposed to serve as a divider
+*/
+.gradient-divider {
+    width: 100vw;
+    height: 20px;
+    background-image:linear-gradient(to right, rgba(219, 238, 254, 0.925), rgba(255, 255, 255, 0.722), rgba(219, 238, 254, 0.925));
+}
+
+/* 
+    get out the whitespace so gradients can serve as the dividers
+    they're meant to w/ element selector on html and body
+*/
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    fix the margin and padding for all other elements
+    (added as we go)
+*/
+h2, p, h3, h4 {
+    margin-left: 20px;
+}
+
+/* make the text smaller for the footer */
+#small-footer {
+    font-size: small;
+}
+
+/* 
+    BEGIN styling links
+    remove underline under links + make it bold
+*/
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* non-visited links are this color */
+a:link {
+    color: royalblue;
+}
+
+/* visited links are this color */
+a:visited {
+    color: darkolivegreen;
+}
+
+/* link will be underlined + another color if hovered by mouse */
+a:hover {
+    text-decoration: underline;
+    color: purple;
+}
+
+/* END styling links */
+
+/* navigation bar */
+nav {
+    /* 90% of the user's screen (viewpoint width/screen width) */
+    width: 90vw;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+/* specify and use the hierarchy pattern here */
+nav ul li {
+    /* to make it horizontal */
+    display: inline-block;
+}
+
+/* to space out the links in the bar a little */
+nav ul li a {
+    padding: 16px 16px;
+}
+
+/* positioning the box we have */
+.ad-box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid darkslategray;
+    background: lightgrey;
+    color: darkslategray;
+
+    /* actual positioning, fixed to bottom right */
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+
+/* table styling */
+table, th, td {
+    border: 1px solid slategray;
+    text-align: center;
+}
+
+table {
+    width: 500px;
+    margin: 0 auto;
+
+    /* collapse the border (white space around it) */
+    border-collapse: collapse;
+}
+
+.greetings {
+    height: 350px;
+}
+
+.basics {
+    height: 500px;
+}
+
+td, th {
+    padding: 12px;
+    vertical-align: center;
+}
+
+th {
+    background-color: azure;
+}
+
+/* list styling (using a class selector) = squares */
+.learning {
+    list-style:square;
+    left: 50px;
+}
+
+/* actual form styling */
+.form-div {
+    background-color: azure;
+    width: 25vw; 
+    margin: 0 auto; /* center? */
+    height: 130px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7.5px;
+}
+
+.text-field {
+    /* opposite to inline block, displays as block element */
+    display: block;
+    margin: 18px auto;
+}
+
+/* making the heart symbol in CSS with two circles and a square */
+.heart {
+    background-color: pink;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transform: rotate(-45deg);
+    margin: 0 10px;
+
+    /* position it in-line so it's not off the side */
+    position: relative;
+    left: 50px;
+}
+
+/* :before and :after selector means to put the following before
+and after the heart div (pseudo-selectors) */
+.heart:before, .heart:after {
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+
+.heart:before {
+    top: -15px;
+    left: 0;
+}
+
+.heart:after {
+    left: 15px;
+    top: 0;
+}
