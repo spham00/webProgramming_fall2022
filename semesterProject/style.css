@@ -1,0 +1,503 @@
+/* applies to the whole page itself */
+html {
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* BEGIN header */
+.header {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* overlay to make the text visible */
+    background: url(images/frontpage_dish.jpg) rgba(0,0,0,0.5);
+    background-size: cover;
+    background-blend-mode: overlay;
+    margin: 0;
+    color: white;
+}
+
+/* make the entire header clickable to go to the homepage basically */
+.header-link {
+    text-decoration: none;
+    /* makes the whole div clickable */
+    display: block;
+}
+
+/* END header */
+
+/* BEGIN navbar */
+.navbar {
+    display: flex;
+    background-color: rgb(44, 34, 15);
+}
+
+/* styling navbar links */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+/* END navbar */
+
+/* general items for the most part */
+
+.red-item {
+    color: rgb(188, 13, 13);
+}
+
+/* BEGIN editing links for particular link style 1*/
+.link-style1 a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-style1 a:link {
+    color: rgb(44, 34, 15);
+}
+
+.link-style1 a:visited {
+    color: rgb(76, 64, 89)
+}
+
+.link-style1 a:hover {
+    color: slategray;
+}
+
+/* END editing links */
+
+/* END general stuff */
+
+/* BEGIN slideshow */
+
+* {box-sizing: border-box}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* hide images by default */
+.slide {
+    display: none;
+}
+
+.img1 {
+    vertical-align: middle;
+}
+
+/* next and prev buttons */
+.prev-img, .next-img {
+    /* cursor indicates the pointing hand here on buttons */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+    /* changes the button transition (slowly) */
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+
+    /* user can't select the text (arrows) */
+    user-select: none;
+}
+
+/* make sure this button is to the right */
+.next-img {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* put black background so angle brackets visible */
+.prev-img:hover, .next-img:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* style credits */
+.credit-pics {
+    /* make it less opacity so text is readable */
+    background-color: rgb(0,0,0,0.5);
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* style the number text which shows how many images are there */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* the dots at the bottom of the slide */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* activated by the user */
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* END slideshow */
+
+/* reviews div styling */
+.review-div {
+    background-color:gainsboro;
+}
+
+.rev-card {
+    padding: 10px 20px 10px 20px;
+    background-color: #717171;
+    color: white;
+    margin: auto;
+    width: 70%;
+}
+
+/* homepage div styling */
+.home-div {
+    background-color: gainsboro;
+}
+
+/* button thing on homepage */
+#home-order {
+    /* appearance-wise */
+    background-color: rgb(44, 34, 15);
+    text-align: center;
+    font-size: 22px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border: 1px solid slategray;
+}
+
+#home-order:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+}
+
+/* BEGIN forms container styling */
+
+/* deciding to use this for other centered elements too */
+.center-title {
+    text-align: center;
+}
+
+.forms {
+    /* margin-top: 50vh; */
+    width: 90vw;
+    margin: 0 auto; /* centers */
+    padding: 10px;
+    /* border: 2px solid black; */
+    /* background-color: blanchedalmond; */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.form-box {
+    width: 350px;
+    height: 450px;
+    /* because margin is responsive, unit space will scale
+        margin is scaling 3% as you downsize the width */
+    margin: 1%;
+    border: 2px solid black;
+    padding: 2px;
+    background-color: gainsboro;
+
+    text-align: left;
+
+    /* provide scroll functionality */
+    overflow: scroll;
+}
+
+.submit-button {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* BEGIN filters checkboxes styling */
+
+.ingredients {
+    list-style: none;
+    margin-left: -20px;
+}
+
+/* for future styling maybe */
+/* .ingredient-item {
+    /* margin-left: -20px;
+} */
+
+/* make headers of ingredient categories bold */
+.ingredient-sub-category {
+    font-weight: bold;
+    color: rgb(89, 64, 9);
+}
+
+.ingredient-category {
+    font-weight: bold;
+    color: rgb(60, 44, 13)
+}
+
+/* space added for formatting */
+.space {
+    margin-top: 10px;
+}
+
+/* carets being added to make it easier for users to access 
+    can't figure this out at the moment */
+
+/* .caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+.active-check {
+    display:block;
+}
+
+.nested {
+    display: none;
+} */
+
+/* END filters checkboxes styling */
+
+/* BEGIN text box styling */
+
+/* to make sure the text isn't touching the sides too much */
+p, h2, .index-p, #index-h1, h3 {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.index-p {
+    font-size: 22px;
+}
+
+/* separate it from the above paragraph */
+.margin-label, #margin-search {
+    margin-left: 16px;
+}
+
+input[type=number] {
+    margin-right: 8px;
+    padding: 2px;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    text-align: right;
+    
+    float: right;
+    clear: both;
+}
+
+/* slightly change color when selected */
+input[type=number]:focus {
+    background-color: rgb(237, 227, 219);
+}
+
+/* END text box styling */
+
+/* END forms container styling */
+
+/* BEGIN find restaurant styling */
+
+.map {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 8px;
+    background-color: gainsboro;
+}
+
+/* END find restaurant styling */
+
+/* BEGIN footer */
+.footer {
+    background-color: rgb(44, 34, 15);
+    color: white;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    padding: 2px;
+}
+
+/* END footer */
+
+/* responsive image that changes size with browser + it's centered */
+.responsive-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    /* center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* to give text a little background difference from website background color */
+.colored-bg {
+    background-color: rgb(255, 245, 229);
+}
+
+/* JQUERY BEGINS */
+.ui-menu {
+    width: 200px;
+}
+
+.ui-widget-header {
+    padding: 0.2em;
+}
+/* JQUERY ENDS */
+
+/* food info BEGIN */
+#info-container {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: stretch;
+}
+
+/* .beside-menu {
+    margin-left: 10px;
+    width: 550px;
+    height: 
+    margin: 10px;
+    bottom: 100px;
+    background-color: gainsboro;
+} */
+
+/* style for food info articles */
+.article {
+    border: 2px solid black;
+    background-color: #d9d6c4;
+    padding: 2px;
+    text-align: left;
+    margin: 2%;
+    max-width: 500px;
+    /* displ */
+}
+
+/* add more space before article */
+.article:before {
+    content: '\A';
+}
+
+/* styling for the menu items so that there's no underline */
+.menu-item-style {
+    text-decoration: none;
+}
+
+/* food info end */
+
+/* radio styling */
+.radio-margin {
+    margin-left: 20px;
+}
+
+.form-box2 {
+    width: 450px;
+    height: 450px;
+    /* because margin is responsive, unit space will scale
+        margin is scaling 3% as you downsize the width */
+    margin: auto;
+    border: 2px solid black;
+    padding: 2px;
+    background-color: gainsboro;
+
+    text-align: left;
+    /* align-self: center; */
+
+    /* provide scroll functionality */
+    overflow: scroll;
+}
+
+/* Responsive layout - width < 700 = column stacked */
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .forms {
+        /* parent already defines the display flex */
+        flex-direction: column;
+        /* aligns things in the center for mobile in the column view
+            notice how this one then becomes horizontal when out of mobile view */
+        align-items: center;
+    }
+
+    #info-container {
+        flex-direction: column;
+    }
+
+    .ui-menu {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .forms {
+        flex-direction: row;
+    }
+
+    .articles {
+        margin: auto;
+    }
+}
