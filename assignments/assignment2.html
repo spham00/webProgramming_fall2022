@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sarah's Music Recommendations!</title>
+    <!-- 
+        This site is supposed to be a music recommendation site where a user can complete a form and
+        a list of music recommendations will be given back to that person through email. It doesn't
+        actually work when you hit the submit button though.
+        
+        I put the "login" at the bottom for supposed admin users with an account to add more songs
+        to the lists (perhaps through another page where you can submit songs and it'll add it, but
+        I'm not actually implementing this).
+    -->
+
+    <!--
+        Using CSS and span classes to specify certain colors
+    -->
+    <style>
+        h3 {
+            color:darkcyan
+        }
+        span.contact {
+            color:mediumblue
+        }
+        span.warning {
+            color:red
+        }
+        span.artistName {
+            color: navy;
+            font-weight:bold;
+        }
+        span {
+            color:seagreen
+        }
+        div {
+            background-color:aliceblue
+        }
+    </style>
+</head>
+<body>
+    <!-- Used Span to in-line color the specific part -->
+    <h2>Welcome to <span>Sarah's Music Recommendations</span>!</h2>
+
+    <!-- Use of Navigation to let people go to places on the site easier -->
+    <div>
+    <h3>Navigation</h3>
+    <nav>
+        <ul>
+            <!-- Anchor links here in the Navigation -->
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#currentRecs">Current Recommendations</a>
+                <!-- 
+                    Nested list to separate current recommendations by genre so users can
+                    skip to a certain genre they want recommendations for.
+                -->
+                <ul>
+                    <li>
+                        <a href="#cityPop">80s Japan City Pop</a>
+                    </li>
+                    <li>
+                        <a href="#krnb">Korean RnB</a>
+                    </li>
+                    <li>
+                        <a href="#kpop">Korean Pop</a>
+                    </li>
+                    <li>
+                        More genres may be added in the future.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#getRec">Get Your Personalized Recommendations!</a>
+            </li>
+            <li>
+                <a href="#login">Staff Login</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+    <!-- Start of About section -->
+    <a name="about"></a>
+    <h3>About</h3>
+
+    <p>
+        This site is for those who are looking for fresh new song recommendations! How it works is simple: all you
+        have to do is complete and submit the form at the bottom of the page, and you'll receive an email with your
+        personalized recommendations. However, if you're short on time, you can take a look from our Current
+        Recommendations list, which has some songs you might like.
+    </p>
+
+    <p>
+        As of right now, most recommendations will be from the following broad three genres: 80s Japan City Pop,
+        K-rnb, and K-pop. We're looking forward to expanding this list in the future.
+    </p>
+
+    <p>
+        Have some song recommendations of your own that you think aren't on the list or want to help with adding more
+        selections? Please contact us through:
+    </p>
+    <ul>
+        <!-- Used span classes to make only specific words show up correctly -->
+        <li>our email, <span class="contact">thisIsAFakeEmail@gmail.com</span></li>
+        <li>
+            or, our phone number, <span class="contact">thi-sis-fake</span> or <span class="contact">844-474-3253</span>
+        </li>
+    </ul>
+
+    <p>
+        <b><span class="warning">DISCLAIMER:</span></b> All contact information and almost everything else about this
+        website is NOT real. The recommendations are, though, if you're willing to try it out and listen. You won't
+        receive an email if you submit the form.
+    </p>
+
+    <div>
+    <!-- Start of Current Recommendations section -->
+    <a name="currentRecs"></a>
+    <h3>Current Recommendations</h3>
+
+    <p>
+        The format of these recommendations is <span class="artistName">artist(s)</span> - song title.
+        Names of the artist and song titles will be in English.
+        Please note that this list is far from complete and may expand/be placed on a different page than this one.
+    </p>
+
+    <!-- Start of 80s Japan City Pop Recommendations -->
+    <a name="cityPop"></a>
+    <h4>80s Japan City Pop</h4>
+
+    <ul>
+        <li><span class="artistName">Anri</span> - Driving My Love</li>
+        <li><span class="artistName">Miki Matsubara</span> - Stay With Me</li>
+        <li><span class="artistName">Yasuha</span> - Flyday Chinatown</li>
+        <li><span class="artistName">Yoko Oginome</span> - Eat You Up</li>
+    </ul>
+
+    <!-- Start of Korean RnB Recommendations -->
+    <a name="krnb"></a>
+    <h4>Korean RnB</h4>
+
+    <ul>
+        <li><span class="artistName">Jiselle, Chancellor</span> - Missed Call</li>
+        <li><span class="artistName">Hoody</span> - D-DAY</li>
+        <li><span class="artistName">Crush, Zion T.</span> - Hey Baby</li>
+    </ul>
+
+    <!-- Start of Korean Pop Recommendations -->
+    <a name="kpop"></a>
+    <h4>Korean Pop</h4>
+
+    <ul>
+        <li><span class="artistName">BLACKPINK</span> - How You Like That</li>
+        <li><span class="artistName">NCT U</span> - The 7th Sense</li>
+        <li><span class="artistName">NCT 127</span> - Limitless</li>
+        <li><span class="artistName">Stray Kids</span> - My Pace</li>
+        <li><span class="artistName">Chungha</span> - Gotta Go</li>
+    </ul>
+    </div>
+
+    <!-- Start of Personalized Recommendations -->
+    <a name="getRec"></a>
+    <h3>Your Personalized Recommendations</h3>
+    
+    <p>
+        At the end of this form, you will receive an email with your very own personalized
+        recommendations. Please fill this accurately so you can get the best possible recommendations
+        for you!
+    </p>
+    <p>
+        Color is asked in case your browser settings are different that would make it hard to see
+        certain colored texts in the incoming email.
+    </p>
+
+    <!-- 
+        Start of actual submission form;
+            Post method sends the form to the database to be stored
+            Contains text, email, and color for the input form.
+            Also contains checkboxes, dropdown, radiobuttons, comment boxes.
+    -->
+    <h4>The Form</h4>
+    <form action="" method="post">
+        <!-- Text, email, color -->
+        <input type="text" placeholder="First name"/>
+        <br/>
+        <br/>
+
+        <input type="email" placeholder="Email address" required/>
+        <br/>
+        <br/>
+
+        <label>
+            What is the color you'd like to see this email in? <input type="color" value="color" required/>
+        </label>
+        <br/>
+        <br/>
+
+        <!-- Checkboxes -->
+        <label>
+            Please select what genre of songs you'd like your recommendations to be. If you don't check any
+            boxes, you may be recommended songs from every genre on this list.
+            <br/>
+            <label>
+                80s Japan City Pop <input type="checkbox" name="genreSelect" value="citypop"/>
+            </label>
+            <label>
+                Korean RnB <input type="checkbox" name="genreSelect" value="krnb"/>
+            </label>
+            <label>
+                Korean Pop <input type="checkbox" name="genreSelect" value="kpop"/>
+            </label>
+        </label>
+        <br/>
+        <br/>
+
+        <!-- Dropdowns -->
+        <label>Please select what kind of music you would like recommendations for.
+            <select name="kind">
+                <option value="chill">Chill</option>
+                <option value="hype">Hype</option>
+                <option value="sleep">Sleep</option>
+                <option value="casual">Casual</option>
+            </select>
+        </label>
+        <br/>
+        <br/>
+
+        <!-- Radiobuttons -->
+        <label>Would you like to subscribe to our email notifications?
+            <br/>
+            <label>Yes
+                <input type="radio" name="subscribe" value="subscribed"/>
+            </label>
+            <label>No
+                <input type="radio" name="subscribe" value="notSubscribed"/>
+            </label>
+        </label>
+        <br/>
+
+        <p>Please leave any additional comments you have below.</p>
+        <textarea rows="5" cols="20"></textarea>
+        <br/>
+        <br/>
+
+        <!-- Submit button -->
+        <input type="submit"/>
+    </form>
+
+    <!--
+        Start of staff login form (contains date and password)
+            The idea is that staff can login and record what day they're logging in to update the system for logs.
+            Staff would have accounts on the website that allows them to modify the song recommendation lists.
+    -->
+    <div>
+    <a name="login"></a>
+    <h3>Staff Login</h3>
+    
+    <form>
+        <input type="text" placeholder="Enter username" name="userName" required/>
+        <br/>
+        <br/>
+
+        <!-- Password and date respectively -->
+        <input type="password" placeholder="Enter password" name="passWord" required/>
+        <br/>
+        <br/>
+
+        <label>
+			Date of login: <input type="date" value="userDate"/>
+		</label>
+        <br/>
+        <br/>
+
+        <!-- Submit button -->
+        <input type="submit"/>
+    </form>
+    </div>
+</body>
+</html>
