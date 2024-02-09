@@ -1,0 +1,84 @@
+/* this is the external style sheet */
+
+/* putting a background image everywhere in the whole html document */
+html {
+    width: 100vw;
+    height: 100vw;
+    background-image: url(image.jpg);
+
+    /* setting background color in case image doesn't show up */
+    background-color: rgb(4, 0, 132);
+
+    /* making the background repeat only vertically */
+    background-repeat: repeat-y;
+    background-size: cover;
+
+    /* margin and padding */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* class selectors */
+/* CSS box model settings */
+.box {
+    width: 70px;
+    height: 50px;
+    padding: 20px 50px 20px 50px;
+
+    /* borders */
+    border: 3px solid white;
+    background-color: black;
+    margin: 10px;
+
+    display: inline-block;
+
+    /* text alignment */
+    text-align: center;
+}
+
+.main-container {
+    width: 100%; 
+}
+
+/* CSS grid settings */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color:black;
+    padding: 5px;
+    
+    /* color of the boxes */
+    color:slategray;
+}
+
+.grid-item {
+    background-color:slategray;
+    color:whitesmoke;
+    border-radius:5px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* multiple class selectors */
+.red-para {
+    color: red;
+}
+
+/* element selector to make all the text white */
+p, h2, h3 {
+    color:white;
+}
+
+/* id selector */
+#yellow-para {
+    color:rgb(229, 229, 154);
+
+    /* text styling */
+    font-weight:bold;
+    background-color: black;
+}
+
+#make-red-visible {
+    background-color: black;
+}
