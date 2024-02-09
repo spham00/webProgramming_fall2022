@@ -1,0 +1,55 @@
+.hide {
+    display: none;
+}
+
+.italic-blue {
+    font-style: italic;
+    color: blue;
+    font-weight: bold;
+}
+
+/* fix size */
+.scenery-image {
+    width: 400px;
+    height: 200px;
+}
+
+.fox {
+    width: 400px;
+    height: 290px;
+}
+
+/* SELECTABLE styling */
+
+#selectable .ui-selecting { 
+    background: lightgray; 
+    color: black;
+}
+
+#selectable .ui-selected { 
+    background: lightgray; 
+    color: black; 
+}
+
+#selectable {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+#selectable li { 
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1em;
+    height: 18px;
+}
+
+/* END of selectable styling */
+
+.circle-div {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    border-radius: 50%; /* circle */
+}
