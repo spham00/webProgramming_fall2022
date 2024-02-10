@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Note: You can enter the bash terminal by clicking the + and clicking bash.
+    -->
+    <title>External Style Sheet</title>
+
+    <!--
+        <style> isn't the best practice, it's better to segregate this because
+        it'll make documents too long, etc.
+
+        rel = relationship between current and other document
+        type = it's a css file
+        href = the name of the css file (location)
+
+        This will be used in the future for JavaScript too.
+    -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <h1>Subjects</h1>
+    <p>What is your favorite subject in Computer Science?</p>
+
+    <!--
+        These are also affected by the styling in CSS.
+        The div exists, you can see it, but it doesn't display so that's why these are affected
+        at first if we don't put anything in the style for div.
+    -->
+    <div>
+        <h1>I am in the div</h1>
+        <p>I am also in the div</p>
+    </div>
+
+    <h4>This is a new header below the div</h4>
+</body>
+</html>
