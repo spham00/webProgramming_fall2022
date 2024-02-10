@@ -1,0 +1,57 @@
+h4 {
+    border: 2px solid blue;
+    width: 200px;
+
+    /*
+        Padding also gets colored with the background-color.
+    */
+    background-color: aliceblue;
+
+    /*
+        Padding goes all around the text
+        You can customize the sides, like -top, -bot, etc.
+
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        The below is shorthand (top left bottom right)
+        The width is preserved (note the above text)
+    */
+    padding: 50px 0px 60px 0px;
+}
+
+div-container {
+    width: 200px;
+}
+
+.box-one {
+    border: 3px solid blue;
+    background-color:yellow;
+    padding:60px;
+
+    display: inline-block;
+    /* 
+        Ensures div is NOT a block element
+        As the window moves (move the inspect back and forth), box2 will
+        be inline with this box and move accordingly.
+    */
+
+    margin: 70px;
+    /*
+        Margin is similar to padding, but it's not included in the box
+        Padding makes the box bigger, margin makes the space around the box bigger
+        Also have directions like top etc.
+
+        The short hand is (look up order later?): 
+            margin: 70px 10px 0px 23px
+
+        Look up CSS Box Model
+    */
+}
+
+.box-two {
+    border: 3px solid blue;
+    background-color:yellow;
+    padding:50px;
+    display: inline-block;
+}
