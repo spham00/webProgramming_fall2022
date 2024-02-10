@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Forms Demo</title>
+
+	<style>
+		div {
+			background-color: blue;
+			text-align: end;
+		}
+	</style>
+</head>
+<body>
+	<h2>Forms Tutorial</h2>
+	<p>Hello</p>
+
+	<!-- 
+		Forms have two important attributes.
+		1) action = where you want to send data to
+			- what we have takes us to lecture2/index.html webpage
+		2) method = what type of HTTP request it is
+			- POST request = send form data to the database
+				* ex. does this user and pass exist? retrieve or reject
+			- GET request = we're trying to retrieve data from database
+				* ex. info loading onscreen
+	-->
+	<form action="index.html" method="post">
+		<input type="text" placeholder="First Name" name="userName" required/>
+		<br/> <!-- break, gets them apart for now -->
+		<br/>
+		<input type="text" placeholder="Last Name" required/>
+		<br/>
+		<br/>
+		<input type="email" placeholder="Email" required/>
+		<br/>
+		<br/>
+		<input type="password" placeholder="Enter password" name="passWord" required/>
+		<br/> <!-- when typing in this box, it's not clear text -->
+		<br/>
+
+		<!-- draggable text area by the corner, allows for comments -->
+		<textarea rows="5" cols="20"></textarea>
+		<br/>
+		<br/>
+
+		<!-- sending data somewhere, a web request -->
+		<input type="submit">
+	</form>
+
+	<h2>Dropdown Demo</h2>
+	<form>
+		<p>You're walking alone along a walk at Rowan and someone jumps out
+		and asks you, "Where are you going?"
+		</p>
+
+		<!-- Nest the select in label -->
+		<label> Pick a destination.
+			<select name="destination">
+				<!-- the "Compiler Design" = key, "compiler" = value -->
+				<option value="compiler">Compiler Design</option>
+				<option value="anime">Anime Club</option>
+			</select>
+		</label>
+		<br/>
+		<br/>
+
+		<label>Please select your major.
+			<br/>
+			<!--
+				If the labels share the same name, you can select between them.
+				If they have different names, you can select multiple of them.
+			-->
+			<label>Computer Science:
+				<input type="radio" name="majorNameChoice" value="computerScience"/>
+			</label>
+			<label>Chemistry:
+				<input type="radio" name="majorNameChoice" value="chemistry"/>
+			</label>
+		</label>
+		<br/>
+		<br/>
+		<input type="submit"/>
+	</form>
+
+	<h2>Other Input Types</h2>
+	<form>
+		<label>
+			Date of Birth: <input type="date" value="userDate"/>
+		</label>
+		<br/>
+		<br/>
+		<label>
+			What is your favorite color? <input type="color" value="color"/>
+		</label>
+		<br/>
+		<br/>
+		<label>
+			Please select favorite food.
+			<label>
+				Pizza <input type="checkbox" name="faveFoodSelect" value="Pizza">
+			</label>
+			<label>
+				Pho <input type="checkbox" name="faveFoodSelect" value="Pho">
+			</label>
+		</label>
+		<br/>
+		<br/>
+		<input type="submit">
+	</form>
+
+	<h2>List Demo</h2>
+	<ul>
+		<li>Japan</li>
+			<ul>
+				<li>Osaka</li>
+				<li>Tokyo</li>
+				<li>Shinjuku</li>
+			</ul>
+		<li>Brazil</li>
+			<ol>
+				<li>Sao Paulo</li>
+				<li>Rio</li>
+			</ol>
+	</ul>
+
+	<h2>Divs Demo</h2>
+	<!-- Divs create sections on a page -->
+	<div> <!-- Parent of the header and paragraphs children -->
+		<h3>Capitals</h2>
+		<p>Tokyo is the capital of Japan.</p>
+		<p>Kyoto is the old capital of Japan.</p>
+	</div>
+
+	<!-- 
+		If you want to work with a video (maybe Pexels, use mp4 web friendly)
+		The poster is the thumbnail of the video
+		Controls adds the controls
+		Make sure to transfer to Elvis and chmod 755 it
+	-->
+	<video src="test.mp4" controls loop poster="sp.jpg"></video>
+	<audio controls>
+		<source src="test.mp3" type="audio/mp3">
+		<!-- This message will show up if the browser doesn't support the elements -->
+		Browswer does not support this type
+	</audio>
+</body>
+</html>
