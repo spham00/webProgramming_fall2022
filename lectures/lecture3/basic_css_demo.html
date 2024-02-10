@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic CSS</title>
+
+    <!-- Style tags w/ Selector Demos
+    Remember to chmod 755 things! -->
+    <style>
+        h1 {
+            color:blue;
+        }
+
+        h3 {
+            color: red;
+            font-size:30px;
+        }
+
+        .second-header {
+            color:black;
+        }
+
+        p {
+            color: green;
+            font-size:22px;
+        }
+
+        .override-paragraph {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .red-text {
+            color:red;
+        }
+
+        #blue-paragraph {
+            color:blue;
+        }
+
+        #red-paragraph {
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        Element selector - done on h1 so that all h1 elements are colored blue.
+        Notice lines in Style end with semicolons. Styling to the same type.
+    -->
+    <h1>Android's Comic Books Shop</h1>
+    <h3>Take me to your comic books and baseball cards!</h3>
+
+    <!--
+        Class selector used here, which writes the prev h3 in the newly set h3 size, but the color of
+        this particular one is black. Use multiple elements which
+    -->
+    <h3 class="second-header">Another h3</h3>
+
+    <!--
+        Notice this also uses class selectors, where both are green but the second paragraph's class
+        will change the font-style and weight.
+    -->
+    <p>This paragraph will be green.</p>
+    <p class="override-paragraph">This paragraph will be green.</p>
+
+    <!--
+        Multiple class selectors allow for you to reference a style in multiple places/attributes.
+    -->
+    <h2 class="red-text">This header also uses the class selector.</h2>
+    <p>This paragraph will be green.</p>
+    <p class="red-text">This paragraph will be green.</p>
+    <p>This paragraph will be green.</p>
+    <p class="red-text">This paragraph will be green.</p>
+
+    <!--
+        ID selectors should only be used once in a document. Make sure to use the # in front
+        of it in the Style attribute. As in, you can make multiple ID selectors and use
+        them just once.
+    -->
+    <p id="blue-paragraph">This paragraph will be blue.</p>
+    <p id="red-paragraph">This paragraph will be blue.</p>
+</body>
+</html>
