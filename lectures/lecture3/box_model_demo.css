@@ -1,0 +1,63 @@
+/* HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Box Model Demo</title>
+    <link rel="stylesheet" type="text/css" href="style3.css"/>
+</head>
+<body>
+    <div class="main-container"> <!-- create main wrapper div -->
+        <!-- You can see how it's grouped using Inspect -->
+        <div class="row-one"> <!-- row 1 -->
+            <div class="box">Div 1</div> <!-- column 1 -->
+            <div class="box">Div 2</div>
+            <div class="box">Div 3</div>
+        </div>
+        <div class="row-two"> <!-- row 2 -->
+            <div class="box">Div 1</div>
+            <div class="box">Div 2</div>
+            <div class="box">Div 3</div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>
+*/
+
+.main-container {
+    width: 100%;
+}
+
+/*
+.row-one {
+    background-color: aliceblue;
+}
+*/
+
+/*
+    You can nest things inside it (CSS chaining)
+    Now row-one has additional customization while being kept relatively
+    similar to row-two.
+    Hovering in Chrome Inspect can make you see the borders.  The color codes for this
+    is at the bottom of the Inspect window.
+*/
+.row-one, .row-two {
+    width: 100%;
+    border: 5px solid green;
+}
+
+.box {
+    width: 80px;
+    height: 20px;
+    padding: 20px;
+    background-color:yellow;
+    margin: 10px;
+
+    /* Inline makes it not fall underneath each other cuz they're block elements by nature */
+    display: inline-block;
+}
