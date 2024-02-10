@@ -1,0 +1,45 @@
+/*
+    This is a comment in CSS files!
+    The ones here are element selectors (changing everything of 1 attribute)
+*/
+
+p {
+    color:orange;
+    text-align: center;
+    font: size 25px;
+}
+
+h1 {
+    color:purple;
+    text-align: center;
+}
+
+/*
+    When in the Inspect, you can see the div border is 220px by 220px.
+    It will center within that div.
+    Each border-width MUST be combined with border-style.
+*/
+div {
+    height: 220px;
+    width: 220px;
+    
+    /*
+        border-width: 8px;
+        border-style: solid;
+        border-color: red;
+
+        You can combine the stuff together instead of as separate lines
+        You can select style like dashed, dotted, etc.
+    */
+
+    border: 2px solid blueviolet;
+}
+
+/*
+    25 viewpoint width, 25% of the viewport (what you see as you scroll)
+    Meanwhile the other text above this one doesn't move
+*/
+h4 {
+    border: 2px solid blue;
+    width: 25vw;
+}
