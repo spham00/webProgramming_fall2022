@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Find Restaurants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <!-- theme -->
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css"/>
+   
+    <!-- include script source to CDN location of most recent jQuery vers -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- load jquery ui -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+    <!-- mostly consists of placeholders for now -->
+
+    <!-- Header (contains page title) -->
+    <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/" class="header-link">
+        <div class="header">
+            <h1>Custom Eats</h1>
+        </div>
+    </a>
+
+    <!-- Navigation bar, used div to make it responsive -->
+    <nav>
+        <div class="navbar">
+            <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/about.html">About Us</a>
+            <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/filters.php">Customize Filters</a>
+            <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/find_restaurants.html">Find Restaurants</a>
+            <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/order.php">Order Now</a>
+            <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/info.html">Food Info</a>
+        </div>
+    </nav>
+
+    <div class="colored-bg">
+        <h2>Find Restaurants</h2>
+        <!-- made it a class in case i'll use it later for other links -->
+        <div class="link-style1">
+            <p>
+                Find restaurants in your area and browse their menus! Menu items are filtered
+                based on the filters you saved in the
+                <a href="http://elvis.rowan.edu/~phamsa68/WebProgramming/SemesterProject/filters.html">
+                    Customize Filters section</a>.
+                Please make sure to visit this first before finding restaurants to customize your
+                filters for your menu-viewing experience.
+            </p>
+        </div>
+    </div>
+
+    <!-- would contain map functionality, empty for now -->
+    <div class="map">
+        <br/>
+        <!-- searchbar placeholder ish -->
+        <form method="post">
+            <div id="margin-search">
+                <!-- required cuz you can't just search nothing -->
+                <input type="text" placeholder="Restaurant name" required/>
+                <input type="submit" value="Search"/>
+            </div>
+        </form>
+        <br/>
+
+        map here
+    </div>
+
+    <div id="accordion">
+        
+    </div>
+
+    <!-- Footer (contains "copyright" info) -->
+    <div class="footer">
+        <h5>All rights reserved, 2022 by Sarah Pham</h5>
+    </div>
+</body>
+</html>
