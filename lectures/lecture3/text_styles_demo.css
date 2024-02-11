@@ -1,0 +1,62 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Text Styles Demo</title>
+    <link rel="stylesheet" type="text/css" href="style4.css"/>
+</head>
+<body>
+    <div class="container">
+        <h2>Great Gaming Co.</h2>
+    </div>
+
+    <div class="container" id="text-container">
+        <!-- 
+            parent or wrapper div using same other class
+            References class AND id
+            Inherits the same class as the container
+        -->
+        <p class="text-content">This is some text content inside the container.</p>
+    </div>
+
+    <p class="para-one">CS is a terrible major!</p>
+    <p class="para-two">Anthropology is a terrible major!</p>
+</body>
+</html>
+*/
+
+h2 {
+    /* There's right and left too */
+    text-align:center;
+}
+
+.container {
+    border: 2px solid black;
+    width: 500px;
+
+    /* Centers this in the middle of the screen even as the window size changes */
+    margin: 0px auto
+}
+
+/* # is id; still uses container styling, but uses text-container has its own height overrides*/
+#text-container {
+    height: 120px;
+}
+
+/* class begins w/ . */
+.text-content {
+    text-align: justify;
+    margin: 50px;
+}
+
+/* spot the difference */
+.para-one {
+    font-weight: bold;
+
+    /* can remove the underline from links w/ none, can customize to line-thru + underline */
+    text-decoration: none;
+}
+
+.para-two {
+    font-style: italic;
+}
