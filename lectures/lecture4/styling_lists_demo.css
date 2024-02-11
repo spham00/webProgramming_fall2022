@@ -1,0 +1,98 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Styling Lists and Links Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <!-- styling lists -->
+    <p>Our most popular video games include:</p>
+    <ul>
+        <li>Chrono Trigger</li>
+        <li>Minecraft</li>
+        <li>Last of Us</li>
+        <li>Ghosts of Tsushima</li>
+        <li>Escape from Tarkov</li>
+    </ul>
+
+    <p>Styling of links</p>
+    <div>
+        <!--
+            the pound sign is the placeholder (clickable but goes nowhere)
+                <a href="#">Google</a>
+            must have the http:// in the beginning or else it'll think that
+                it's a directory to go to
+            notice it changes color if it's visited/clicked on
+        -->
+        <a href="http://www.google.com">Google</a>
+        <a href="http://rowan.edu">Rowan University</a>
+
+        <p>I am outside the nested paragraph</p>
+        <div>
+            <!-- this paragraph is nested in a div -->
+            <p>Please style me using CSS.</p>
+        </div>
+    </div>
+</body>
+</html>
+*/
+
+/* element selector */
+ul {
+    /* 
+        the list items are changed to roman numerals for upper-roman
+        lower-alpha = alpha numeric
+        none = for building navigation menus, remove the bullets
+    */
+    list-style-type: none;
+}
+
+/* changes all paragraphs regardless whether they're in div or not */
+p {
+    color:blue;
+}
+
+/* if the style sees a div and then a paragraph inside it (pattern),
+    it'll change it (if we had div p {)
+    think about the hierarchy while doing this */
+div div p {
+    color:green;
+}
+
+/* 
+    show 4 different "link states" we can affect
+    this first one is the anchor tags (a)
+*/
+a {
+    font-size: 20px;
+
+    /* removes underline for links */
+    text-decoration: none;
+}
+
+/* 
+    a:link = standard links on your page
+    non-visited links will turn green
+*/
+a:link {
+    color: green;
+}
+
+/* a:visited = links that the user has been to before */
+a:visited {
+    color: gold;
+}
+
+/* a:hover = what styling do you want to apply when hovering
+    aka the hover state (hovering = when you hover your mouse over it */
+a:hover {
+    color:blue;
+    text-decoration: underline;
+}
+
+/* a:active = when user clicks the link; when user presses on the button
+    you can see it when you click and drag it (for example) */
+a:active {
+    color:red;
+}
