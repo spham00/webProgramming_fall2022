@@ -1,0 +1,44 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navigation Bar Demo</title>
+    <link rel="stylesheet" type="text/css" href="style4.css"/>
+</head>
+<body>
+    <!-- search engines prefer this over divs -->
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Videogames</a></li>
+            <li><a href="#">Stores</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+*/
+
+nav {
+    /* 90% of the user's screen (viewpoint width/screen width) */
+    width: 90vw;
+    margin: 0 auto;
+}
+
+/* specify and use the hierarchy pattern here */
+nav ul li {
+    /* to make it horizontal */
+    display: inline-block;
+}
+
+/* target the anchor tags inside the nav (chain) */
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase; /* anything is uppercased */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #5971AD;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
