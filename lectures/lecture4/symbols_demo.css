@@ -1,0 +1,57 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Symbols using CSS Demo</title>
+    <link rel="stylesheet" type="text/css" href="style3.css"/>
+</head>
+<body>
+    <!-- div is a block element , they fall underneath each other on a new line -->
+    <div> <!-- row 1 -->
+        <div class="circle"></div>
+        <div class="circle" id="black-circle"></div>
+        <div class="circle" id="red-circle"></div>
+    </div>
+    <div class="row-two"> <!-- row 2 -->
+        <div class="circle" id="gold-circle"></div>
+        <div class="circle" id="green-circle"></div>
+    </div>
+</body>
+</html>
+*/
+
+.circle {
+    width:200px;
+    height:200px;
+    border: 10px solid blue;
+
+    /* radius makes them circles */
+    border-radius: 50%;
+    /* makes them fall in line */
+    display: inline-block;
+}
+
+/* creating an identifier (overrides the border line) */
+#black-circle {
+    border: 10px solid black;
+}
+
+#red-circle {
+    border: 10px solid red;
+}
+
+#gold-circle {
+    border: 10px solid gold;
+}
+
+#green-circle {
+    border: 10px solid green;
+}
+
+/* need to position row 2 to make the Olympics rings */
+.row-two {
+    position: relative;
+    left: 120px;
+    bottom: 100px;
+    z-index: -1;
+}
