@@ -1,0 +1,25 @@
+header {
+    width: 100vw;
+    height: 100vw;
+    /* background-color: black; */
+    /* note it's not full width and height (based on browser) */
+    background-image: url(image.jpg);
+    
+    /* 
+        make this better
+        cover can make cover the entire window as it moves
+        the background is scaling
+        if remove the cover, it's not scaling (it's just taking up the whole space
+        cuz the picture's big)
+        play around with things ig
+    */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* now the background-color goes full screen */
+}
