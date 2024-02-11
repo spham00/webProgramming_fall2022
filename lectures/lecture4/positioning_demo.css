@@ -1,0 +1,88 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Positioning Demo</title>
+    <link rel="stylesheet" type="text/css" href="style2.css"/>
+</head>
+<body>
+    <h2>Positioning</h2>
+    <div class="box-one">Box one</div>
+    <div class="box-two">Box two</div>
+    <div class="box-three">Box three</div>
+    <div class="box-four">Box four</div>
+
+    <div class="red-stick">Red stick</div>
+    <div class="blue-stick">Blue stick</div>
+</body>
+</html>
+*/
+
+.box-one {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: aliceblue;
+
+    /* remember, color itself is the text */
+    color:blue;
+
+    /* we're saying this div is relative to its current position
+        the other boxes don't know that this one moved */
+    position: relative;
+    top: 50px;      /* move relative where it is currently */
+    left: 50px;     /* move 50 relative to where it would've been */
+}
+
+.box-two {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: palegoldenrod;
+    color: blue;
+
+    /* when applied, you remove the FLOW of the document and all
+        elements act like this block does not exist
+        what happened? the other boxes don't know this one exists,
+            so they fall "up" */
+    position: absolute;
+    top: 5px;       /* w/ absolute, you're moving top left corner from top of page */
+    left: 10px;     /* based on the 0,0, left coords of page */
+
+    /* remember that box 2 on top of "position" heading;
+        think xyz axes */
+    z-index: -1;    /* say 1, 10, 500, or some arbitrary value; negative = back */
+    /* if we want to put box 1 behind this, we use -2 (less than) */
+}
+
+.box-three {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: palegreen;
+    color: blue;
+
+    position: relative;
+    left: 300px;
+}
+
+.box-four {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: palevioletred;
+    color: blue;
+
+    /* by itself, it's nowhere
+        goes relative to the top coordinates 
+        you can scroll and the box will stay on the page*/
+    position: fixed;
+    top: 110px;
+    left: 300px;
+}
+
+.red-stick {
+    height: 1000px;
+    background-color: red;
+    width: 20px;
+}
