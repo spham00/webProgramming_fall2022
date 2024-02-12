@@ -1,0 +1,43 @@
+.hide {
+    display: none;
+}
+
+.blue-class {
+    color: blue;
+    font-style: italic;
+}
+
+.city-image {
+    width: 400px;
+    height: 200px;
+}
+
+.circle-div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%; /* circle */
+}
+
+#draggable {
+    width: 100px;
+    height: 100px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0px;
+}
+
+#droppable {
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+}
+
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
