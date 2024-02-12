@@ -1,0 +1,47 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table Styling Demo</title>
+    <link rel="stylesheet" type="text/css" href="style6.css"/>
+</head>
+<body>
+    <table>
+        <tr> <!-- headings -->
+            <th>Name</th>
+            <th>House</th>
+            <th>Trait</th>
+        </tr>
+        <tr>
+            <td>Cersei</td>
+            <td>Lanister</td>
+            <td>Queen</td>
+        </tr>
+        <tr>
+            <td>Eddard</td>
+            <td>Stark</td>
+            <td>King</td>
+        </tr>
+    </table>
+</body>
+</html>
+*/
+/* the table, th, and td will share these styles */
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+
+    /* collapse the border (white space around it) */
+    border-collapse: collapse;
+}
+
+td {
+    padding: 12px;
+    vertical-align: top;
+    background-color: aliceblue;
+}
