@@ -1,0 +1,17 @@
+/* element selector */
+header {
+    width: 100vw;
+    height: 100vw;
+    background-image:linear-gradient(blue,pink);
+    /*
+        we can specify the gradient direction + more color
+            background-image:linear-gradient(to right, blue, pink, yellow);
+    */
+}
+
+/* universal selector, use this to make the gradient
+    cover the entire thing (without the white space) */
+* {
+    margin: 0px;
+    padding: 0px;
+}
