@@ -1,0 +1,76 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- for mobile view??? -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- Another way to position elements on a page -->
+    <title>Flexbox Demo</title>
+    <!-- stylesheets style2.css and style21.css are both stylesheets for this -->
+    <link rel="stylesheet" type="text/css" href="style21.css"/>
+</head>
+<body>
+    <!--
+        Good convention: grouping everything and each has an identifier
+        Grouping the whole box, then classifying each box as a grid-item
+    -->
+    <div class="container">
+        <!-- Notice these divs are inside the parent div -->
+        <div class="grid-item" id="box-one">1</div>
+        <div class="grid-item" id="box-two">2</div>
+        <div class="grid-item" id="box-three">3</div>
+    </div>
+</body>
+</html>
+*/
+
+/* 
+    Second flexbox stylesheet for index2.html
+    Includes media query
+*/
+
+@media screen and (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        background-color:aliceblue;
+    }
+}
+
+.container {
+    /* width: 600px; */
+    width: 80vw;
+    margin: 0 auto; /* centers */
+    border: 2px solid blue;
+
+    display: flex;
+    flex-direction: row;
+    /*
+        center: centers the thing
+        end: justifies everything to the end of the content
+        flex-start: justifies it to the start
+        space-evenly: space the boxes evenly within the parent div
+        space-between: not always even spacing but it ensures space between?
+    */
+    justify-content: space-around;
+}
+
+.grid-item {
+    width: 140px;
+    height: 100px;
+    /* because margin is responsive, unit space will scale
+        margin is scaling 3% as you downsize the width */
+    margin: 3%;
+    background-color: yellow;
+    border: 2px solid blue;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        /* parent already defines the display flex */
+        flex-direction: column;
+        /* aligns things in the center for mobile in the column view
+            notice how this one then becomes horizontal when out of mobile view */
+        align-items: center;
+    }
+}
