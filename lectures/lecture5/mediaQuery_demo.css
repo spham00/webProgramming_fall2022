@@ -1,0 +1,58 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Allows us to apply styling depending on if a condition is true/false
+        Can be things like screen width
+    -->
+    <title>Media Query Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <h2>Making a responsive website</h2>
+
+    <p class="para-one">
+        We can use media queries to apply different css styles based on screen width.
+    </p>
+
+    <p id="para-two">
+        I am a unique paragraph and have a unique ID!
+    </p>
+</body>
+</html>
+*/
+
+/*
+    Let's  write the first media query to change style of h2
+    if a certain condition is true. It's okay to use pixels
+    here since they set the different screen widths. The parts
+    inside only run if the condition is met.
+
+    You can use Inspect to simulate the webpage in multiple views.
+*/
+@media only screen and (max-width: 600px) {
+    /* If max width <= 600, apply styling */
+    h2 {
+        color: blue;
+    }
+
+    /* class selectors work in here */
+    .para-one {
+        color: green;
+        text-decoration: underline;
+    }
+
+    /* id selectors too */
+    #para-two {
+        color: orange;
+        font-weight: bold;
+    }
+}
+
+/* If width > 620 px, styling is applied (inverse of above) */
+@media only screen and (min-width: 601px) {
+    h2, p {
+        color: green;
+    }
+}
