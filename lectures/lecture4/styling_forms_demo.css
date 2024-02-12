@@ -1,0 +1,59 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms Styling Demo</title>
+    <link rel="stylesheet" type="text/css" href="style5.css"/>
+</head>
+<body>
+    <form class="form-div">
+        <input type="text" placeholder="Enter full name" class="text-field"/>
+        <input type="text" placeholder="Enter email" class="text-field"/>
+        <textarea class="text-area"></textarea>
+        <input type="submit" class="button"/>
+    </form>
+</body>
+</html>
+*/
+
+.form-div {
+    background-color: lightblue;
+    width: 50vw; 
+    margin: 0 auto; /* center? */
+    height: 300px;
+    padding: 25px;
+}
+
+/* chained; this definition will apply to both classes */
+.text-field, .text-area {
+    /* opposite to inline block, displays as block element */
+    display: block;
+    margin: 18px auto;
+    font-size: 20px;
+
+    /* round border around the text box */
+    border-radius: 5.5px;
+
+    /* other fonts are back-ups */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.text-field {
+    height: 40px;
+    /* overrides above */
+    border: 1px solid lightgray;
+}
+
+/* we can style the button too */
+.button {
+    position: relative;
+    left: 200px;
+    width: 120px;
+    height: 45px;
+    background-color: lightcoral;
+    color: red;
+    font-weight: bold;
+    border-radius: 7.5px; /* round it more */
+    /* for a see-through box: opacity: 0.7; */
+}
